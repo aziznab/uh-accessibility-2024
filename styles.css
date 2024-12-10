@@ -93,6 +93,13 @@ section::before {
     border-radius: 16px;
 }
 
+#about p {
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
+    text-align: center;
+}
+
 .card {
     background-color: #ffffff;
     border-radius: 12px;
