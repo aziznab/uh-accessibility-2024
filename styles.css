@@ -151,15 +151,16 @@ hr {
 }
 
 footer {
-    background-color: #f1f1f1;
-    padding: 20px 0;
+    background-color: #343a40;
+    padding: 40px 0;
     text-align: center;
-    color: #212529;
+    color: #ffffff;
 }
 
 footer .contact-info {
-    max-width: 800px;
-    margin: 0 auto;
+    padding: 20px;
+    display: block;
+    color: #ffffff;
 }
 
 footer .contact-info p {
