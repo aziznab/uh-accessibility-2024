@@ -201,12 +201,13 @@ footer .contact-info p {
 }
 
 #moreInfo {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 
 #moreInfo.show {
-    display: block;
+    max-height: 100px;
     opacity: 1;
 }
