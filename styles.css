@@ -15,10 +15,13 @@ body {
     line-height: 1.6;
     background-color: #f8f9fa;
     color: #212529;
+}
+
+main {
     animation: fadeIn 1s ease-in-out;
 }
 
-body::before {
+main::before {
     content: "";
     position: fixed;
     top: 0;
