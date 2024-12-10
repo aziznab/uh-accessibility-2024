@@ -158,18 +158,23 @@ hr {
 }
 
 footer {
-    background-color: #343a40;
+    background-color: #212529;
     padding: 40px 0;
     text-align: center;
-    color: #ffffff;
+    color: #f8f9fa;
+}
+
+footer h2 {
+    color: #007bff;
 }
 
 footer .contact-info {
     padding: 20px;
     display: block;
-    color: #ffffff;
+    color: #f8f9fa;
 }
 
 footer .contact-info p {
     margin: 5px 0;
+    color: #f8f9fa;
 }
