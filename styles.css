@@ -101,10 +101,16 @@ section::before {
 }
 
 .card {
+    width: 200px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: white;
     background-color: #ffffff;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    margin: 40px auto;
+    margin: 0 auto;
     max-width: 800px;
     padding: 30px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -209,6 +215,11 @@ footer .contact-info p {
 }
 
 #languages, #frameworks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
     transition: max-height 0.5s ease, opacity 0.5s ease;
     overflow: hidden;
     max-height: 0;
@@ -216,11 +227,26 @@ footer .contact-info p {
 }
 
 #languages.show, #frameworks.show {
-    max-height: 500px;
+    max-height: 1000px;
     opacity: 1;
 }
 
 #languages img, #frameworks img {
     vertical-align: middle;
     margin-right: 10px;
+}
+
+.primary-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px 0;
+}
+
+.primary-button:hover {
+    background-color: #0056b3;
 }
