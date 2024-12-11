@@ -200,7 +200,6 @@ footer .contact-info p {
 }
 
 #revealMore {
-    background-color: #007bff;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -251,16 +250,20 @@ footer .contact-info p {
 }
 
 .primary-button {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #0056b3;
+    color: #ffffff;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
     cursor: pointer;
+    border-radius: 8px;
     transition: background-color 0.3s ease;
-    margin: 10px 0;
 }
 
 .primary-button:hover {
-    background-color: #0056b3;
+    background-color: #004494;
 }
