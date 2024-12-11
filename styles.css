@@ -101,6 +101,11 @@ section::before {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 250px;
     width: 200px;
     text-align: center;
     padding: 20px;
@@ -133,6 +138,11 @@ section::before {
     border-radius: 16px;
 }
 
+.card img {
+    display: block;
+    margin: 0 auto;
+}
+
 h1, h2 {
     color: #007bff;
     text-align: center;
@@ -152,6 +162,13 @@ img {
     object-fit: cover;
     display: block;
     margin: 0 auto;
+}
+
+.tech-image {
+    margin-right: 0px;
+    border-radius: 12px;
+    width: 100px;
+    height: 100px;
 }
 
 hr {
@@ -231,7 +248,6 @@ footer .contact-info p {
 
 #languages img, #frameworks img {
     vertical-align: middle;
-    margin-right: 10px;
 }
 
 .primary-button {
