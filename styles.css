@@ -376,3 +376,44 @@ footer .contact-info p {
     transform: translateX(10px);
     background: rgba(0, 123, 255, 0.2);
 }
+
+.reveal-section {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.additional-info {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.additional-info h3 {
+    color: #007bff;
+    margin: 1.5rem 0 1rem;
+    font-size: 1.4rem;
+}
+
+.additional-info p {
+    margin: 1rem 0;
+    line-height: 1.6;
+    color: #333;
+    text-align: left;
+}
+
+#moreInfo {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+#moreInfo.show {
+    opacity: 1;
+    max-height: 1000px;
+    margin-top: 2rem;
+}
