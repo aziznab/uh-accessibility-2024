@@ -120,23 +120,25 @@ section::before {
 }
 
 .card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 200px;
-    height: 250px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: slideUp 0.5s ease-in-out;
-    border-radius: 16px;
-    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+.card p {
+    margin-top: 1rem;
+    line-height: 1.4;
 }
 
 .card::before {
@@ -155,6 +157,22 @@ section::before {
 .card img {
     display: block;
     margin: 0 auto;
+}
+
+.tech-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    padding: 10px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    margin-bottom: 1rem;
+}
+
+.tech-image:hover {
+    transform: scale(1.05);
 }
 
 h1, h2 {
@@ -176,13 +194,6 @@ img {
     object-fit: cover;
     display: block;
     margin: 0 auto;
-}
-
-.tech-image {
-    margin-right: 0px;
-    border-radius: 12px;
-    width: 100px;
-    height: 100px;
 }
 
 hr {
