@@ -15,6 +15,7 @@ body {
     line-height: 1.6;
     background-color: #f8f9fa;
     color: #212529;
+    overflow-x: hidden;
 }
 
 body::before {
@@ -66,14 +67,32 @@ nav ul li a:hover {
 }
 
 section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 40px 20px;
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: 1000px;
+    width: 90%;
+    margin: 20px auto 40px auto;
     background-color: #ffffff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
     border: 1px solid #e0e0e0;
     position: relative;
+    gap: 20px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-align: justify;
+    hyphens: auto;
 }
 
 section#about {
@@ -101,21 +120,18 @@ section::before {
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 250px;
-    width: 200px;
+    width: 90%;
+    max-width: 600px;
     text-align: center;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     background-color: white;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    margin: 20px;
+    margin: 20px auto;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: slideUp 0.5s ease-in-out;
 }
@@ -212,35 +228,47 @@ footer .contact-info p {
     background-color: #0056b3;
 }
 
-#moreInfo {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.5s ease, opacity 0.5s ease;
-}
-
-#moreInfo.show {
-    max-height: 100px;
-    opacity: 1;
-}
-
 .hidden {
     display: none;
 }
 
+.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    max-height: 500px;
+    opacity: 1;
+}
+
+#moreInfo {
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+}
+
+#moreInfo.show {
+    max-height: 500px; /* Adjust this value based on content */
+    opacity: 1;
+}
 #languages, #frameworks {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     align-items: flex-start;
-    transition: max-height 0.5s ease, opacity 0.5s ease;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
     overflow: hidden;
     max-height: 0;
     opacity: 0;
 }
 
 #languages.show, #frameworks.show {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
     max-height: 1000px;
     opacity: 1;
 }
@@ -262,8 +290,13 @@ footer .contact-info p {
     cursor: pointer;
     border-radius: 8px;
     transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
 .primary-button:hover {
     background-color: #004494;
+}
+
+#languages.hidden, #frameworks.hidden {
+    display: none;
 }
